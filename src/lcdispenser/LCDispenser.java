@@ -1,7 +1,5 @@
 package lcdispenser;
 
-import net.minecraft.src.BlockDispenser;
-import net.minecraft.src.IBehaviorDispenseItem;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
@@ -13,10 +11,12 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartedEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import net.minecraft.block.BlockDispenser;
+import net.minecraft.dispenser.IBehaviorDispenseItem;
 import net.minecraftforge.liquids.LiquidContainerData;
 import net.minecraftforge.liquids.LiquidContainerRegistry;
 
-@Mod(name="LCDispenser", version="0.0.0", modid = "LCDispenser")
+@Mod(name="LCDispenser", version="@THIS_MOD_VERSION@", modid = "LCDispenser")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class LCDispenser {
 	

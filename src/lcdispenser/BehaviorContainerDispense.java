@@ -1,11 +1,11 @@
 package lcdispenser;
 
-import net.minecraft.src.BehaviorDefaultDispenseItem;
-import net.minecraft.src.EnumFacing;
-import net.minecraft.src.IBehaviorDispenseItem;
-import net.minecraft.src.IBlockSource;
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.TileEntityDispenser;
+import net.minecraft.dispenser.BehaviorDefaultDispenseItem;
+import net.minecraft.dispenser.IBehaviorDispenseItem;
+import net.minecraft.dispenser.IBlockSource;
+import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntityDispenser;
+import net.minecraft.util.EnumFacing;
 
 public abstract class BehaviorContainerDispense implements IBehaviorDispenseItem
 {
