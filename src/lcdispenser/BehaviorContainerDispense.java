@@ -74,7 +74,7 @@ public class BehaviorContainerDispense implements IBehaviorDispenseItem
 			}
 			if(tilebelow != null && LiquidContainerRegistry.isFilledContainer(itemstack))
 			{
-				return fillContainer((ITankContainer)tilebelow, itemstack, EnumFacing.DOWN);
+				return emptyContainer((ITankContainer)tilebelow, itemstack, EnumFacing.DOWN);
 			}
 		}
 		System.out.println("Not matched");
