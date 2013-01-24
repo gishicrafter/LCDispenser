@@ -1,5 +1,5 @@
 <?xml version="1.0" ?> 
-<project name="LCDispenser">
+<project name="LCDispenser" default="release">
 	
 	<property file="build.properties" />
 	
