@@ -43,6 +43,8 @@
 	</macrodef>
 	
 	<target name="build" depends="clean,version">
+		<copy-api-dir dir="buildcraft/api/gates" />
+		<copy-api-file dir="buildcraft/api/transport" file="IPipe.java"/>
 		<filter token="THIS_MOD_VERSION" value="${version.full}" />
 		<copy todir="${dir.mcp}\src\minecraft" filtering="yes">
 			<fileset dir="${dir.src}" />
@@ -72,6 +74,7 @@
 		<mkdir dir="${dir.release}" />
 		<jar destfile="${dir.release}\${release.mod.name}-${version.full}.jar">
 			<fileset dir="${dir.mcp}\reobf\minecraft" />
+			<fileset dir="${dir.resource}" />
 		</jar>
 		
 		<antcall target="clean" />
