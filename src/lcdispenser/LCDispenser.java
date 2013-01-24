@@ -42,12 +42,12 @@ public class LCDispenser {
 		for(LiquidContainerData data: LiquidContainerRegistry.getRegisteredLiquidContainerData()){
 			IBehaviorDispenseItem behavior = (IBehaviorDispenseItem) BlockDispenser.dispenseBehaviorRegistry.func_82594_a(data.container.getItem());
 			if(!(behavior instanceof BehaviorContainerDispense)){
-				BlockDispenser.dispenseBehaviorRegistry.putObject(data.container.getItem(), new BehaviorContainerEmptyDispense(behavior));
+				BlockDispenser.dispenseBehaviorRegistry.putObject(data.container.getItem(), new BehaviorContainerDispense(behavior));
 				++i;
 			}
 			behavior = (IBehaviorDispenseItem) BlockDispenser.dispenseBehaviorRegistry.func_82594_a(data.filled.getItem());
 			if(!(behavior instanceof BehaviorContainerDispense)){
-				BlockDispenser.dispenseBehaviorRegistry.putObject(data.filled.getItem(), new BehaviorContainerFullDispense(behavior));
+				BlockDispenser.dispenseBehaviorRegistry.putObject(data.filled.getItem(), new BehaviorContainerDispense(behavior));
 				++i;
 			}
 		}
